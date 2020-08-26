@@ -58,3 +58,12 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+*/bin
+*/obj 
+.vs/ 
+CGD1/Library 
+CGD1/Temp 
+CGD1/obj 
+CGD1/Logs 
+CGD1/Assembly-CSharp.csproj packages/
+
