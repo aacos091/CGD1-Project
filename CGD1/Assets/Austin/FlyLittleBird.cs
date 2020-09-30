@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FlyLittleBird : MonoBehaviour
 {
-    public float velocity = 1;
+    public float upVelocity = 1;
+    public float directionalVelocity = 1;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class FlyLittleBird : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
             // Jump
-            rb.velocity = Vector2.up * velocity;
+            rb.velocity = (Vector2.up * upVelocity) + (Vector2.right * directionalVelocity);
         }
     }
 }
