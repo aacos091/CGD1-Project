@@ -23,4 +23,16 @@ public class FlyLittleBird : MonoBehaviour
             rb.velocity = (Vector2.up * upVelocity) + (Vector2.right * directionalVelocity);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "RightWall")
+        {
+            directionalVelocity = -directionalVelocity;
+        }
+        else if (collision.gameObject.tag == "LeftWall")
+        {
+            directionalVelocity = -directionalVelocity;
+        }
+    }
 }
