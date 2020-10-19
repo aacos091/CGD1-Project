@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Matheus/Main Menu.unity
+    guid: e417f0bd770f24a42813725987773ab4
+  - enabled: 1
+    path: Assets/Austin/Austin-Test.unity
+    guid: 0da4853a5ad778447b37e236c24d231e
   m_configObjects: {}
