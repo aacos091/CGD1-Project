@@ -6,7 +6,7 @@ public class PipeSpawner : MonoBehaviour
 {
     public float maxTime = 1;
     private float timer = 0;
-    public GameObject pipe;
+    public GameObject trap;
     public float height;
 
     // Start is called before the first frame update
@@ -20,9 +20,9 @@ public class PipeSpawner : MonoBehaviour
     {
         if (timer > maxTime) 
         {
-            GameObject newPipe = Instantiate(pipe);
-            newPipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-            Destroy(newPipe, 15);
+            GameObject newTrap = Instantiate(trap);
+            //newTrap.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
+            Destroy(newTrap, 10);
             timer = 0;
         }
 

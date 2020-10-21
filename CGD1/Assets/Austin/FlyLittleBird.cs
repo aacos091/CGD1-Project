@@ -7,11 +7,13 @@ public class FlyLittleBird : MonoBehaviour
     public float upVelocity = 1;
     public float directionalVelocity = 1;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,10 +31,16 @@ public class FlyLittleBird : MonoBehaviour
         if (collision.gameObject.tag == "RightWall")
         {
             directionalVelocity = -directionalVelocity;
+            sr.flipX = true;
         }
         else if (collision.gameObject.tag == "LeftWall")
         {
             directionalVelocity = -directionalVelocity;
+            sr.flipX = false;
+        }
+        else if (collision.gameObject.tag == "GlueTrap") 
+        {
+            Destroy(this.gameObject);
         }
     }
 }
