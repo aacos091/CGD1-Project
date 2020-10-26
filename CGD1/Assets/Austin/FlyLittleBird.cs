@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlyLittleBird : MonoBehaviour
 {
     public float upVelocity = 1;
     public float directionalVelocity = 1;
+    public int score = 0;
+    public Text scoreText;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
@@ -23,7 +26,11 @@ public class FlyLittleBird : MonoBehaviour
         {
             // Jump
             rb.velocity = (Vector2.up * upVelocity) + (Vector2.right * directionalVelocity);
+
+            score += 5;
         }
+
+        scoreText.text = score.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
