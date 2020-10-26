@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Matheus/Main Menu.unity
+    path: Assets/Matheus/MainMenu.unity
     guid: e417f0bd770f24a42813725987773ab4
   - enabled: 1
     path: Assets/Austin/Austin-Test.unity
     guid: 0da4853a5ad778447b37e236c24d231e
+  - enabled: 1
+    path: Assets/Matheus/GameOverScreen.unity
+    guid: ce1b1f3f93a968b4d828d75247f5a3d0
   m_configObjects: {}

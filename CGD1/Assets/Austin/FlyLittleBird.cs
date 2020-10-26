@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FlyLittleBird : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class FlyLittleBird : MonoBehaviour
         else if (collision.gameObject.tag == "GlueTrap") 
         {
             Destroy(this.gameObject);
+            SceneManager.LoadScene("Game Over Screen");
         }
     }
 }
