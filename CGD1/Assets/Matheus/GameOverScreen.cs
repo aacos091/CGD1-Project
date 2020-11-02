@@ -9,4 +9,13 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadScoresMenu()
+    {
+        SceneManager.LoadScene("ScoresMenu");
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("KitchenLevel");
+    }
 }
