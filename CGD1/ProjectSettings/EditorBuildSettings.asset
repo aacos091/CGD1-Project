@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Austin/Austin-Test.unity
     guid: 0da4853a5ad778447b37e236c24d231e
   - enabled: 1
+    path: Assets/Matheus/OptionsMenu.unity
+    guid: a5daab0b0616e1b4fbab1f82599bc779
+  - enabled: 1
+    path: Assets/Matheus/ScoresMenu.unity
+    guid: e0df36cd699fa2f4d90ead613edc2077
+  - enabled: 1
     path: Assets/Matheus/GameOverScreen.unity
     guid: ce1b1f3f93a968b4d828d75247f5a3d0
   m_configObjects: {}

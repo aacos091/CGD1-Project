@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadMainMenu : MonoBehaviour
+public class GameOverScreen : MonoBehaviour
 {
-    public void LoadMenu()
+    public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
