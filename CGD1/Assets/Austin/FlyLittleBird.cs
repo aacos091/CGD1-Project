@@ -49,7 +49,7 @@ public class FlyLittleBird : MonoBehaviour
         else if (collision.gameObject.tag == "GlueTrap") 
         {
             Destroy(this.gameObject);
-            SceneManager.LoadScene("Game Over Screen");
+            SceneManager.LoadScene("GameOverScreen");
         }
     }
 }
