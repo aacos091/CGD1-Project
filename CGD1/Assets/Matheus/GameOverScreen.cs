@@ -18,4 +18,8 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("KitchenLevel");
     }
+    public void SewerLevel()
+    {
+        SceneManager.LoadScene("SewerLevel");
+    }
 }
