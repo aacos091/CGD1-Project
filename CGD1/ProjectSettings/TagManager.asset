@@ -7,6 +7,7 @@ TagManager:
   - LeftWall
   - RightWall
   - GlueTrap
+  - SpiderWeb
   layers:
   - Default
   - TransparentFX

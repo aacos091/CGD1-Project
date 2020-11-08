@@ -53,9 +53,21 @@ public class FlyLittleBird : MonoBehaviour
             Destroy(this.gameObject);
             if (score >= scoreThreshold)
             {
-                SceneManager.LoadScene(nextScene);
+                SceneManager.LoadScene("Intermission1");
             }
             else 
+            {
+                SceneManager.LoadScene("GameOverScreen");
+            }
+        }
+        else if (collision.gameObject.tag == "SpiderWeb")
+        {
+            Destroy(this.gameObject);
+            if (score >= scoreThreshold)
+            {
+                SceneManager.LoadScene("Intermission2");
+            }
+            else
             {
                 SceneManager.LoadScene("GameOverScreen");
             }

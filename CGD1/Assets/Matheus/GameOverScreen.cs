@@ -22,4 +22,8 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("SewerLevel");
     }
+    public void OutsideLevel()
+    {
+        SceneManager.LoadScene("OutsideLevel");
+    }
 }
