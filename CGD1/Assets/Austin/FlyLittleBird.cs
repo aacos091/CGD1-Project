@@ -10,6 +10,8 @@ public class FlyLittleBird : MonoBehaviour
     public float directionalVelocity = 1;
     public int score = 0;
     public Text scoreText;
+    public int scoreThreshold;
+    public string nextScene;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
@@ -49,7 +51,14 @@ public class FlyLittleBird : MonoBehaviour
         else if (collision.gameObject.tag == "GlueTrap") 
         {
             Destroy(this.gameObject);
-            SceneManager.LoadScene("GameOverScreen");
+            if (score >= scoreThreshold)
+            {
+                SceneManager.LoadScene(nextScene);
+            }
+            else 
+            {
+                SceneManager.LoadScene("GameOverScreen");
+            }
         }
     }
 }

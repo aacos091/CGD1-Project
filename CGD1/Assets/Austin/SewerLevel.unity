@@ -1179,6 +1179,8 @@ MonoBehaviour:
   directionalVelocity: 0.5
   score: 0
   scoreText: {fileID: 1869734012}
+  scoreThreshold: 200
+  nextScene: OutsideLevel
 --- !u!70 &1255997407
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

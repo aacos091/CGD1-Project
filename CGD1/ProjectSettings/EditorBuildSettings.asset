@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Austin/KitchenLevel.unity
     guid: 0da4853a5ad778447b37e236c24d231e
   - enabled: 1
+    path: Assets/Austin/SewerLevel.unity
+    guid: 6bbadccb0139f7e49bfbc58e66947446
+  - enabled: 1
+    path: Assets/Austin/OutsideLevel.unity
+    guid: f650637a8bb33e84e8eb4937366e39f9
+  - enabled: 1
     path: Assets/Matheus/OptionsMenu.unity
     guid: a5daab0b0616e1b4fbab1f82599bc779
   - enabled: 1
