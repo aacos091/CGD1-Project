@@ -1181,6 +1181,9 @@ MonoBehaviour:
   scoreText: {fileID: 1869734012}
   scoreThreshold: 100
   nextScene: SewerLevel
+  poweredUp: 0
+  normalSprite: {fileID: 21300000, guid: 74d57ccd8cdd90a4f83374dc7cc2ceb7, type: 3}
+  poweredSprite: {fileID: 21300000, guid: bbee4c0e48a884b41a87ade100955077, type: 3}
 --- !u!70 &1255997407
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

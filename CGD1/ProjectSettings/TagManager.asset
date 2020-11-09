@@ -9,6 +9,7 @@ TagManager:
   - GlueTrap
   - SpiderWeb
   - music
+  - Shield
   layers:
   - Default
   - TransparentFX

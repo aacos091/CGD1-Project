@@ -12,6 +12,9 @@ public class FlyLittleBird : MonoBehaviour
     public Text scoreText;
     public int scoreThreshold;
     public string nextScene;
+    public bool poweredUp = false;
+    public Sprite normalSprite;
+    public Sprite poweredSprite;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
@@ -20,6 +23,7 @@ public class FlyLittleBird : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        sr.sprite = normalSprite;
     }
 
     // Update is called once per frame
@@ -38,6 +42,13 @@ public class FlyLittleBird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Shield") 
+        {
+            Destroy(collision.gameObject);
+            score += 25;
+            poweredUp = true;
+            sr.sprite = poweredSprite;
+        }
         if (collision.gameObject.tag == "RightWall")
         {
             directionalVelocity = -directionalVelocity;
@@ -50,26 +61,42 @@ public class FlyLittleBird : MonoBehaviour
         }
         else if (collision.gameObject.tag == "GlueTrap") 
         {
-            Destroy(this.gameObject);
-            if (score >= scoreThreshold)
+            if (poweredUp == true)
             {
-                SceneManager.LoadScene("Intermission1");
+                poweredUp = false;
+                sr.sprite = normalSprite;
             }
             else 
             {
-                SceneManager.LoadScene("GameOverScreen");
+                Destroy(this.gameObject);
+                if (score >= scoreThreshold)
+                {
+                    SceneManager.LoadScene("Intermission1");
+                }
+                else
+                {
+                    SceneManager.LoadScene("GameOverScreen");
+                }
             }
         }
         else if (collision.gameObject.tag == "SpiderWeb")
         {
-            Destroy(this.gameObject);
-            if (score >= scoreThreshold)
+            if (poweredUp == true)
             {
-                SceneManager.LoadScene("Intermission2");
+                poweredUp = false;
+                sr.sprite = normalSprite;
             }
             else
             {
-                SceneManager.LoadScene("GameOverScreen");
+                Destroy(this.gameObject);
+                if (score >= scoreThreshold)
+                {
+                    SceneManager.LoadScene("Intermission2");
+                }
+                else
+                {
+                    SceneManager.LoadScene("GameOverScreen");
+                }
             }
         }
     }
