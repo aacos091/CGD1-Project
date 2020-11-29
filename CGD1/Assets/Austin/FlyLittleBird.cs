@@ -99,5 +99,21 @@ public class FlyLittleBird : MonoBehaviour
                 }
             }
         }
+        else if (collision.gameObject.tag == "BoundaryBox")
+        {
+            Destroy(this.gameObject);
+            if (score >= scoreThreshold && SceneManager.GetActiveScene().name == "KitchenLevel")
+            {
+                SceneManager.LoadScene("Intermission1");
+            } 
+            else if (score >= scoreThreshold && SceneManager.GetActiveScene().name == "SewerLevel") 
+            {
+                SceneManager.LoadScene("Intermission2");
+            }
+            else
+            {
+                SceneManager.LoadScene("GameOverScreen");
+            }
+        }
     }
 }

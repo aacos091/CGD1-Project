@@ -10,6 +10,7 @@ TagManager:
   - SpiderWeb
   - music
   - Shield
+  - BoundaryBox
   layers:
   - Default
   - TransparentFX
