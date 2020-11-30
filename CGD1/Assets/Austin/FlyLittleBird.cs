@@ -26,6 +26,7 @@ public class FlyLittleBird : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         sr.sprite = normalSprite;
         pause.removePause();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().playGameplayMusic();
     }
 
     // Update is called once per frame
