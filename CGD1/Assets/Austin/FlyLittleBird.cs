@@ -15,6 +15,7 @@ public class FlyLittleBird : MonoBehaviour
     public bool poweredUp = false;
     public Sprite normalSprite;
     public Sprite poweredSprite;
+    public PauseMenu pause;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
@@ -24,12 +25,13 @@ public class FlyLittleBird : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         sr.sprite = normalSprite;
+        pause.removePause();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0) && pause.IsGamePaused() == false) 
         {
             // Jump
             rb.velocity = (Vector2.up * upVelocity) + (Vector2.right * directionalVelocity);

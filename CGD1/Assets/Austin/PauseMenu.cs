@@ -27,6 +27,18 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void PauseButtonClicked() 
+    {
+        if (GameIsPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
+    }
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -44,10 +56,22 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
 
     public void QuitGame()
     {
-        
+        Application.Quit();
+    }
+
+    public bool IsGamePaused() 
+    {
+        return GameIsPaused;
+    }
+
+    public void removePause() 
+    {
+        GameIsPaused = false;
     }
 }
