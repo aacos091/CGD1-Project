@@ -71,6 +71,7 @@ public class FlyLittleBird : MonoBehaviour
             }
             else 
             {
+                newHighScore();
                 Destroy(this.gameObject);
                 if (score >= scoreThreshold)
                 {
@@ -91,6 +92,7 @@ public class FlyLittleBird : MonoBehaviour
             }
             else
             {
+                newHighScore();
                 Destroy(this.gameObject);
                 if (score >= scoreThreshold)
                 {
@@ -104,6 +106,7 @@ public class FlyLittleBird : MonoBehaviour
         }
         else if (collision.gameObject.tag == "BoundaryBox")
         {
+            newHighScore();
             Destroy(this.gameObject);
             if (score >= scoreThreshold && SceneManager.GetActiveScene().name == "KitchenLevel")
             {
@@ -117,6 +120,14 @@ public class FlyLittleBird : MonoBehaviour
             {
                 SceneManager.LoadScene("GameOverScreen");
             }
+        }
+    }
+
+    public void newHighScore() 
+    { 
+        if (score > PlayerPrefs.GetInt("HighScore", 0)) 
+        {
+            PlayerPrefs.SetInt("HighScore", score);
         }
     }
 }
