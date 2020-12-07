@@ -1507,7 +1507,7 @@ GameObject:
   - component: {fileID: 1619688452}
   - component: {fileID: 1619688451}
   m_Layer: 0
-  m_Name: GlueTrapSpawner1
+  m_Name: HazardSpawner1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1522,11 +1522,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1619688450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0931c1b5f4d87b94ebc376628753fe38, type: 3}
+  m_Script: {fileID: 11500000, guid: d603dab3f7bca3d409e39712f870135d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 3
-  trap: {fileID: 6856863586018446328, guid: 7b59bc89ab62c0d41b682b8dfb6c4c5b, type: 3}
+  traps:
+  - {fileID: 6856863586018446328, guid: 7b59bc89ab62c0d41b682b8dfb6c4c5b, type: 3}
+  - {fileID: 146769910660392813, guid: b97aafe8d6325e343b3f817325b742a4, type: 3}
   height: 0
 --- !u!4 &1619688452
 Transform:
@@ -1685,7 +1687,7 @@ GameObject:
   - component: {fileID: 1716310110}
   - component: {fileID: 1716310109}
   m_Layer: 0
-  m_Name: GlueTrapSpawner2
+  m_Name: HazardSpawner2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1700,11 +1702,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1716310108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0931c1b5f4d87b94ebc376628753fe38, type: 3}
+  m_Script: {fileID: 11500000, guid: d603dab3f7bca3d409e39712f870135d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 4
-  trap: {fileID: 6465551514989316162, guid: 926368c0d25d06040a8d64511cdc36e9, type: 3}
+  traps:
+  - {fileID: 6465551514989316162, guid: 926368c0d25d06040a8d64511cdc36e9, type: 3}
+  - {fileID: 146769910660392813, guid: c376116914fe8014f970a8bc9abef68a, type: 3}
   height: 0
 --- !u!4 &1716310110
 Transform:
